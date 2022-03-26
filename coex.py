@@ -10,7 +10,7 @@ script , combo_file , ex_file = argv
 cfile = open(combo_file)
 xfile = open(ex_file, 'w')
 def rexmail(cfile):
-	rexmail = re.compile(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+:[a-zA-Z0-9._-]+')
+	rexmail = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+:[a-zA-Z0-9._@*!-]+")#"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+:[a-zA-Z0-9._@*!-]+"gm
 	cfile = rexmail.findall(cfile.read())
 	
 	lenofclist = len(cfile)
